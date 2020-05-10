@@ -7,6 +7,8 @@ import { NopagefoundComponent } from './nopagefound/nopagefound.component';
 import { APP_ROUTES } from './app.routes';
 import { RegisterComponent } from './login/register/register.component';
 import { PagesModule } from './pages/pages.module';
+import { SettingsService } from './services/settings/settings.service';
+import { ServicesModule } from './services/services.module';
 
 @NgModule({
   declarations: [
@@ -18,9 +20,12 @@ import { PagesModule } from './pages/pages.module';
   imports: [
     BrowserModule,
     APP_ROUTES,
-    PagesModule
+    PagesModule,
+    ServicesModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+  constructor(public settings: SettingsService){ }
+}

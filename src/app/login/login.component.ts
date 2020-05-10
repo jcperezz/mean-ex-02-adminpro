@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+
+// Declara una función JS
+// declare function example();
 
 @Component({
   selector: 'app-login',
@@ -8,9 +12,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
+  constructor( public router: Router) { }
 
   ngOnInit(): void {
+  }
+
+  login(): void{
+
+    // Usa la función JavaScript
+    // example();
+
+    // Redirige a otras paginas
+    this.router.navigate(['/dashboard']);
+
   }
 
 }
