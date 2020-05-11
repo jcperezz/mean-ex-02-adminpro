@@ -11,7 +11,9 @@ export class SidebarService {
     submenu: [
       {name: 'Dashboard', ref: '/dashboard'},
       {name: 'Progress', ref: '/progress'},
-      {name: 'Graficas', ref: '/graficas1'}
+      {name: 'Graficas', ref: '/graficas1'},
+      {name: 'Promesas', ref: '/promesas'},
+      {name: 'RxJs', ref: '/rxjs'}
     ]
   }];
 
